@@ -36,8 +36,7 @@ const storyArray = [
       "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2014/10/14/Weekend/Images/Film_Review_Whiplash-0908c.jpg",
     logo:
       "https://4.bp.blogspot.com/-Tlo1Oj--0sA/VHMOZIbcRWI/AAAAAAAAI7k/B6RUcQszw9I/s1600/Whiplash%2BTitle.png",
-    video:
-      "https://player.vimeo.com/external/429211514.sd.mp4?s=18cc12383affa2da6ea0be6606b0c8e1ffed8520&profile_id=165&oauth2_token_id=57447761",
+    video: "story2.mp4",
   },
   {
     id: 3,
@@ -47,8 +46,7 @@ const storyArray = [
       "https://upload.wikimedia.org/wikipedia/en/f/fc/Armageddon-poster06.jpg",
     logo:
       "https://vignette.wikia.nocookie.net/logopedia/images/8/86/Armageddon-movie-logo.png/revision/latest/scale-to-width-down/340?cb=20150919000323",
-    video:
-      "https://player.vimeo.com/external/435097746.sd.mp4?s=76a886751a34fd60ccd82cbc1d0dacc3358d5ebf&profile_id=165&oauth2_token_id=57447761",
+    video: "story3.mp4",
   },
   {
     id: 4,
@@ -58,8 +56,7 @@ const storyArray = [
       "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
     logo:
       "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pulp_Fiction_Logo.png",
-    video:
-      "https://player.vimeo.com/external/403125995.sd.mp4?s=d169de68f48a447dc0a7e7958146c7964a7a54b1&profile_id=165&oauth2_token_id=57447761",
+    video: "story1.mp4",
   },
   {
     id: 5,
@@ -69,8 +66,7 @@ const storyArray = [
       "https://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2014/10/14/Weekend/Images/Film_Review_Whiplash-0908c.jpg",
     logo:
       "https://4.bp.blogspot.com/-Tlo1Oj--0sA/VHMOZIbcRWI/AAAAAAAAI7k/B6RUcQszw9I/s1600/Whiplash%2BTitle.png",
-    video:
-      "https://player.vimeo.com/external/317360351.sd.mp4?s=811d66428c1436bb1e40581c5f622f435103fc1c&profile_id=165&oauth2_token_id=57447761",
+    video: "story2.mp4",
   },
   {
     id: 6,
@@ -80,8 +76,7 @@ const storyArray = [
       "https://upload.wikimedia.org/wikipedia/en/f/fc/Armageddon-poster06.jpg",
     logo:
       "https://vignette.wikia.nocookie.net/logopedia/images/8/86/Armageddon-movie-logo.png/revision/latest/scale-to-width-down/340?cb=20150919000323",
-    video:
-      "https://player.vimeo.com/external/451819548.sd.mp4?s=48be90713a741a6569b3a8abf2f5354e50e35003&profile_id=165&oauth2_token_id=57447761",
+    video: "story3.mp4",
   },
 ];
 
@@ -96,12 +91,7 @@ const Stories = ({ navigation }) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("Story", {
-                stories: storyArray,
-                index: storyArray.findIndex((s) => s === item),
-              })
-            }
+            onPress={() => navigation.navigate("Story", { item })}
           >
             <StoryItem stories={storyArray} item={item} />
           </TouchableOpacity>
