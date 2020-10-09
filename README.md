@@ -1,4 +1,4 @@
-Netflix clone application with React.js and Movie API 🎥
+Netflix clone application with React native  🎥
 
 ![Netflix](https://github.com/safak/React-Native-Netflix-Clone/blob/master/react-native-netflix.gif)
 
